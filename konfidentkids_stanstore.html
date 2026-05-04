@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KonfidentKids — Stan Store Sales Copy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0B1A3A;   /* primary dark navy */
+    --navy-deep:  #050E22;   /* deeper accent */
+    --navy-soft:  #1A2A52;   /* softer navy for cards */
+    --yellow:     #FFD23F;   /* primary brand yellow */
+    --yellow-hot: #FFC300;   /* CTA yellow */
+    --yellow-soft:#FFE88A;   /* soft yellow accent */
+    --cream:      #FFF8E7;   /* cream background tint */
+    --white:      #FFFDF7;
+    --ink:        #0B1A3A;
+    --mid:        #4A5578;
+    --border:     rgba(11,26,58,0.12);
+    --border-yellow: rgba(255,210,63,0.35);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ─────────── SECTION LABELS ─────────── */
+  .block-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--yellow);
+    padding: 8px 16px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .block-label.light {
+    background: rgba(255,210,63,0.18);
+    color: var(--yellow);
+    border: 1px solid rgba(255,210,63,0.35);
+  }
+
+  .section-note {
+    background: #FFF;
+    border: 1px dashed var(--navy);
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin: 16px 0 32px;
+    font-size: 13px;
+    color: var(--mid);
+    font-style: italic;
+  }
+  .section-note strong {
+    color: var(--navy);
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 11px;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ─────────── HERO ─────────── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-soft) 100%);
+    color: var(--white);
+    border-radius: 28px;
+    padding: 72px 56px 64px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(255,210,63,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 260px; height: 260px;
+    background: radial-gradient(circle, rgba(255,210,63,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-brand {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(40px, 5.5vw, 62px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--yellow);
+    font-weight: 400;
+  }
+  .hero-sub {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255,253,247,0.82);
+    max-width: 680px;
+    margin-bottom: 36px;
+  }
+  .trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,210,63,0.25);
+  }
+  .trust-item {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,253,247,0.9);
+    padding: 8px 14px;
+    background: rgba(255,210,63,0.08);
+    border: 1px solid rgba(255,210,63,0.2);
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+  }
+
+  /* ─────────── BLOCK WRAPPER ─────────── */
+  .block {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 56px 48px;
+    margin-bottom: 32px;
+    border: 1px solid var(--border);
+    position: relative;
+  }
+
+  .block.dark {
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+  }
+
+  .block h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(30px, 3.8vw, 44px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    color: var(--navy);
+  }
+  .block.dark h2 { color: var(--white); }
+
+  .block h2 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--yellow-hot);
+  }
+  .block.dark h2 em { color: var(--yellow); }
+
+  .block h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .block.dark h3 { color: var(--yellow-soft); }
+
+  .block .tagline {
+    font-size: 17px;
+    color: var(--mid);
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+  .block.dark .tagline { color: rgba(255,253,247,0.75); }
+
+  .block p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .block.dark p { color: rgba(255,253,247,0.88); }
+
+  .block p strong { color: var(--navy); font-weight: 700; }
+  .block.dark p strong { color: var(--yellow); }
+
+  /* ─────────── FREE LEAD MAGNET BLOCK ─────────── */
+  .lead-magnet {
+    background: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-hot) 100%);
+    color: var(--navy);
+    border-radius: 24px;
+    padding: 48px 44px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .lead-magnet::before {
+    content: "🎁";
+    position: absolute;
+    font-size: 220px;
+    top: -40px;
+    right: -20px;
+    opacity: 0.15;
+    transform: rotate(-15deg);
+  }
+  .lead-magnet .block-label {
+    background: var(--navy);
+    color: var(--yellow);
+  }
+  .lead-magnet h2 { color: var(--navy); }
+  .lead-magnet h2 em { color: var(--navy-deep); font-style: italic; }
+  .lead-magnet .tagline { color: var(--navy-deep); font-weight: 500; }
+  .lead-magnet p { color: var(--navy-deep); }
+
+  /* ─────────── FEATURE LISTS ─────────── */
+  .feature-list {
+    list-style: none;
+    margin: 24px 0;
+    padding: 0;
+  }
+  .feature-list li {
+    padding: 14px 0 14px 36px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+    border-bottom: 1px solid var(--border);
+  }
+  .feature-list li:last-child { border-bottom: none; }
+  .feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0; top: 14px;
+    width: 24px; height: 24px;
+    background: var(--yellow);
+    color: var(--navy);
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+  }
+  .block.dark .feature-list li { border-bottom-color: rgba(255,253,247,0.1); }
+  .lead-magnet .feature-list li::before {
+    background: var(--navy);
+    color: var(--yellow);
+  }
+  .lead-magnet .feature-list li { border-bottom-color: rgba(11,26,58,0.15); color: var(--navy-deep); }
+
+  /* ─────────── MODULE LIST ─────────── */
+  .modules {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 32px 0;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .module-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 20px;
+    padding: 18px 22px;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+    transition: background 0.2s;
+  }
+  .module-row:last-child { border-bottom: none; }
+  .module-row:hover { background: var(--cream); }
+  .module-num {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--yellow-hot);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .module-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+  .module-desc {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.5;
+  }
+  .module-desc strong { color: var(--navy); font-weight: 600; }
+
+  /* ─────────── CTA BUTTONS ─────────── */
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--yellow-hot);
+    color: var(--navy);
+    padding: 20px 36px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 17px;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 0 var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 var(--navy);
+  }
+  .cta.dark-cta {
+    background: var(--navy);
+    color: var(--yellow);
+    box-shadow: 0 4px 0 var(--yellow-hot);
+  }
+  .cta.dark-cta:hover { box-shadow: 0 6px 0 var(--yellow-hot); }
+  .cta-note {
+    display: block;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--mid);
+    font-style: italic;
+  }
+  .block.dark .cta-note { color: rgba(255,253,247,0.6); }
+
+  /* ─────────── PRICING ─────────── */
+  .price-box {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 32px;
+    border-radius: 16px;
+    margin: 32px 0 24px;
+    text-align: center;
+    border: 2px solid var(--yellow);
+  }
+  .price-main {
+    font-family: 'Fraunces', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--yellow);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .price-strike {
+    font-size: 18px;
+    color: rgba(255,253,247,0.55);
+    text-decoration: line-through;
+    margin-top: 6px;
+  }
+  .price-plan {
+    font-size: 14px;
+    color: var(--yellow-soft);
+    margin-top: 8px;
+    font-weight: 500;
+  }
+  .price-label {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--yellow);
+    margin-bottom: 8px;
+  }
+
+  .trust-micro {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--mid);
+    flex-wrap: wrap;
+  }
+  .trust-micro span { white-space: nowrap; }
+
+  /* ─────────── MEET KATY CALLOUT ─────────── */
+  .katy-callout {
+    background: linear-gradient(135deg, rgba(255,210,63,0.12) 0%, rgba(255,210,63,0.05) 100%);
+    border-left: 4px solid var(--yellow-hot);
+    padding: 28px 32px;
+    border-radius: 12px;
+    margin: 32px 0;
+  }
+  .katy-callout h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .katy-callout p {
+    color: var(--mid);
+    margin-bottom: 0;
+    line-height: 1.65;
+  }
+
+  /* ─────────── WHY THIS EXISTS ─────────── */
+  .why-strip {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 32px;
+    border-radius: 12px;
+    margin: 32px 0;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .why-strip strong {
+    color: var(--yellow);
+    font-weight: 700;
+  }
+
+  /* ─────────── TESTIMONIALS ─────────── */
+  .testimonials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .quote {
+    background: var(--cream);
+    padding: 28px 32px;
+    border-radius: 16px;
+    border-left: 4px solid var(--yellow-hot);
+    position: relative;
+  }
+  .quote::before {
+    content: "“";
+    font-family: 'Fraunces', serif;
+    font-size: 72px;
+    color: var(--yellow);
+    position: absolute;
+    top: -10px; left: 18px;
+    line-height: 1;
+    opacity: 0.4;
+  }
+  .quote p {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 12px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+  }
+  .quote-attrib {
+    font-size: 13px;
+    color: var(--mid);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  /* ─────────── GUARANTEE ─────────── */
+  .guarantee {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 24px;
+    padding: 56px 48px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .guarantee::before {
+    content: "🛡️";
+    position: absolute;
+    font-size: 300px;
+    top: -50px;
+    right: -60px;
+    opacity: 0.05;
+  }
+  .guarantee h2 {
+    color: var(--yellow);
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .guarantee p {
+    color: rgba(255,253,247,0.85);
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .guarantee .closer {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--yellow-soft);
+    margin-top: 20px;
+    font-weight: 500;
+  }
+
+  /* ─────────── MISSION ─────────── */
+  .mission {
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(180deg, transparent 0%, rgba(255,210,63,0.08) 100%);
+    border-radius: 24px;
+    margin-bottom: 32px;
+  }
+  .mission p {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .mission p:last-child {
+    color: var(--yellow-hot);
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /* ─────────── NAV / CHOOSE YOUR STEP ─────────── */
+  .choose {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .choose-card {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .choose-card:hover {
+    border-color: var(--yellow-hot);
+    transform: translateY(-4px);
+  }
+  .choose-card.primary {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--yellow-hot);
+  }
+  .choose-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  .choose-title {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .choose-card.primary .choose-title { color: var(--yellow); }
+  .choose-desc {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.5;
+  }
+  .choose-card.primary .choose-desc { color: rgba(255,253,247,0.75); }
+
+  /* ─────────── BIO LINK HEADER ─────────── */
+  .bio-header {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 24px;
+    padding: 44px 40px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .bio-brand {
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--yellow);
+    margin-bottom: 8px;
+  }
+  .bio-tag {
+    font-size: 16px;
+    color: rgba(255,253,247,0.85);
+    margin-bottom: 18px;
+  }
+  .bio-cta {
+    font-size: 14px;
+    color: var(--yellow-soft);
+    font-weight: 600;
+  }
+
+  /* ─────────── COPY INSTRUCTION BAR ─────────── */
+  .copy-bar {
+    background: var(--navy-deep);
+    color: var(--yellow);
+    padding: 20px 28px;
+    border-radius: 14px;
+    margin: 60px 0 30px;
+    font-size: 13px;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+  }
+  .copy-bar strong {
+    color: var(--white);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ─────────── MOBILE ─────────── */
+  @media (max-width: 720px) {
+    .page { padding: 0 16px 60px; }
+    .hero { padding: 48px 28px 40px; border-radius: 20px; }
+    .block, .guarantee, .mission, .lead-magnet { padding: 40px 24px; border-radius: 20px; }
+    .module-row { grid-template-columns: 56px 1fr; gap: 12px; padding: 16px; }
+    .module-num { font-size: 24px; }
+    .choose { grid-template-columns: 1fr; }
+    .price-main { font-size: 38px; }
+    .hero-sub { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<!-- ============================================ -->
+<!-- SECTION 0 — INSTRUCTIONS                     -->
+<!-- ============================================ -->
+<div class="copy-bar">
+<strong>📋 How to use this page</strong>
+Each block below is a self-contained section designed to be pasted into a separate Stan Store block. Copy the <em>text content</em> of each section — Stan Store will apply its own styling. Use this HTML preview to see how the copy reads, the hierarchy, and what to lead with. Ready-to-paste text versions of each section are also available in plain form at the bottom.
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 1 — HERO / TOP BANNER                -->
+<!-- ============================================ -->
+<div class="block-label">Block 01 — Hero / Top Banner</div>
+
+<div class="hero">
+  <div class="hero-brand">KonfidentKids · Presented by Katy</div>
+  <h1>The confidence your child isn't getting <em>in school</em> — taught in 10 short videos.</h1>
+  <p class="hero-sub">Built for kids aged 6–12 who are shy, anxious, scared to speak up, or crumbling at the first sign of failure. No therapy waitlists. No awkward parent lectures. Just 10 fun modules that actually work — presented by Katy, the coach your child will ask to watch again.</p>
+  <div class="trust-strip">
+    <span class="trust-item">⭐ 10 Video Modules</span>
+    <span class="trust-item">📒 Interactive Workbook</span>
+    <span class="trust-item">👨‍👩‍👧 Parent Guide</span>
+    <span class="trust-item">♾️ Lifetime Access</span>
+    <span class="trust-item">🛡️ 30-Day Money-Back</span>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 2 — FREE LEAD MAGNET                 -->
+<!-- ============================================ -->
+<div class="block-label">Block 02 — Free Lead Magnet (Top of Funnel)</div>
+
+<div class="lead-magnet">
+  <div class="block-label">💛 Start Here — Free</div>
+  <h2>The Power Phrase Cards</h2>
+  <p class="tagline"><em>What to say when your child says "I can't."</em></p>
+  <p>Your child's inner voice is being built right now — one sentence at a time. The problem? Most of what they hear is what <strong>not</strong> to do.</p>
+  <p>Download the free Power Phrase Cards — 12 printable affirmations your child can read, repeat, and actually believe. The exact phrases used inside the full KonfidentKids course to rewire how kids talk to themselves when things get hard.</p>
+
+  <ul class="feature-list">
+    <li>12 printable Power Phrase Cards (PDF) — print once, use forever</li>
+    <li>A 1-page parent script: how to introduce them without eye-rolls</li>
+    <li>A preview of Module 1 from the full course</li>
+  </ul>
+
+  <a href="#" class="cta dark-cta">📥 Send Me the Free Cards</a>
+  <span class="cta-note">No credit card. No trial. Just the cards.</span>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 3 — CORE OFFER                       -->
+<!-- ============================================ -->
+<div class="block-label">Block 03 — Core Offer (The Hero Product)</div>
+
+<div class="block dark">
+  <div class="block-label light">🔥 Best Seller</div>
+  <h2>KonfidentKids: The Complete <em>Confidence Course</em></h2>
+  <p class="tagline">10 Modules · 1 Workbook · A child who walks differently into a room.</p>
+
+  <p>If your child is shy, scared to try, shrinking at school, or melting down when things don't go their way — you already know the dance class isn't fixing it. Football practice isn't fixing it. Another bedtime pep talk from you isn't fixing it either.</p>
+
+  <p>Confidence isn't a personality. It's a <strong>skill</strong>. And like any skill, it has to be taught — in a language kids actually listen to.</p>
+
+  <p style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 500; color: var(--yellow); font-style: italic; margin-top: 24px;">That's what this is.</p>
+
+  <h3 style="margin-top: 40px;">What's inside the course</h3>
+
+  <!-- Modules list -->
+  <div class="modules">
+    <div class="module-row">
+      <div class="module-num">01</div>
+      <div>
+        <div class="module-title">The Adventure Begins</div>
+        <div class="module-desc">Planting the <strong>Confidence Seed</strong> — confidence starts in the heart.</div>
+      </div>
+    </div>
+    <div class="module-row">
+      <div class="module-num">02</div>
+      <div>
+        <div class="module-title">What Is Confidence?</div>
+        <div class="module-desc">Redefining failure and building the <strong>Bravery Muscle</strong>. Mistakes become lessons.</div>
+      </div>
+    </div>
+    <div class="module-row">
+      <div class="module-num">03</div>
+      <div>
+        <div class="module-title">Knowing Me</div>
+        <div class="module-desc">Discovering their <strong>Star of Me</strong> — unique strengths and superpowers.</div>
+      </div>
+    </div>
+    <div class="module-row">
+      <div class="module-num">04</div>
+      <div>
+        <div class="module-title">Speak Up, Stand Tall</div>
+        <div class="module-desc">Using <strong>"I" statements</strong> and <strong>Superhero Posture</strong> so their voice is heard.</div>
+      </div>
+    </div>
+    <div class="module-row">
+      <div class="module-num">05</div>
+      <div>
+        <div class="module-title">Feel It, Deal With It</div>
+        <div class="module-desc">The <strong>Magic Breath</strong> technique for calming big emotions.</div>
+      </div>
+    </div>
+    <div class="module-row">
+      <div class="module-num">06</div>
+      <div>
+        <div class="module-title">Peer Pressure &amp; Boundaries</div>
+        <div class="module-desc">The <strong>Invisible Bubble</strong> — and learning that "No" is a complete sentence.</div>
+      </div>
+    </div>
+    <div class="module-row">
+      <div class="module-num">07</div>
+      <div>
+        <div class="module-title">Online Confidence</div>
+        <div class="module-desc">The <strong>Traffic Light Rule</strong> for posting and protecting personal information.</div>
+      </div>
+    </div>
+    <div class="module-row">
+      <div class="module-num">08</div>
+      <div>
+        <div class="module-title">The Bully Shield</div>
+        <div class="module-desc">The <strong>Stop, Move, Tell</strong> action plan. Being a buddy, not a bystander.</div>
+      </div>
+    </div>
+    <div class="module-row">
+      <div class="module-num">09</div>
+      <div>
+        <div class="module-title">Bouncing Back</div>
+        <div class="module-desc">The <strong>Power of YET</strong> — "I can't" becomes "I can't… yet."</div>
+      </div>
+    </div>
+    <div class="module-row">
+      <div class="module-num">10</div>
+      <div>
+        <div class="module-title">The Confident Me Project</div>
+        <div class="module-desc">Creative synthesis so confidence actually <strong>sticks for life</strong>.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 40px;">Plus everything they need to actually do the work</h3>
+  <ul class="feature-list">
+    <li><strong>The Interactive Konfident Kid Workbook</strong> — drawing, journaling, mission-tracking. Active participation, not passive watching.</li>
+    <li><strong>Power Phrase Cards</strong> — daily affirmations that rewire their self-talk</li>
+    <li><strong>The Bully-Proof Script Library</strong> — exact words for when someone is mean, excluding them, or trolling them online</li>
+    <li><strong>Graduation Certificate</strong> — because finishing something matters at this age</li>
+    <li><strong>Lifetime Access</strong> — yours forever. Watch it, rewatch it, hand it down to the younger sibling in two years.</li>
+  </ul>
+
+  <!-- Katy callout -->
+  <div class="katy-callout">
+    <h4>Meet Katy.</h4>
+    <p>Katy is your child's on-screen coach. She's warm. She's fun. She's <em>not you</em> (which, let's be honest, is exactly why they'll actually listen). Built specifically for ages 6–12, she makes confidence feel like an adventure — not a lecture.</p>
+  </div>
+
+  <!-- Why this exists -->
+  <div class="why-strip">
+    <strong>Why this exists:</strong> A child therapist costs $100–$200 per session. The CAMHS/NHS waitlist is 270,000+ children deep. Most kids in most schools get zero structured confidence training before age 13. KonfidentKids gives you the full 10-session curriculum — <strong>for less than the cost of one therapy appointment.</strong>
+  </div>
+
+  <!-- Pricing -->
+  <div class="price-box">
+    <div class="price-label">💥 Launch Price</div>
+    <div class="price-main">$67</div>
+    <div class="price-strike">Regular Price $97</div>
+    <div class="price-plan">Or 3 easy payments of $25</div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="#" class="cta">🚀 Enroll My Child Today</a>
+    <div class="trust-micro">
+      <span>🔒 Secure Stripe Checkout</span>
+      <span>📱 Instant Access</span>
+      <span>🛡️ 30-Day Guarantee</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 4 — PARENT GUIDE (UPSELL)            -->
+<!-- ============================================ -->
+<div class="block-label">Block 04 — Parent Guide (Order Bump / Upsell)</div>
+
+<div class="block">
+  <div class="block-label">👨‍👩‍👧 Parent Favourite · Add-On</div>
+  <h2>The Parent <em>Companion Guide</em></h2>
+  <p class="tagline">What to say when you don't know what to say.</p>
+
+  <p>Your child comes home from school. Head down. Quiet. Eventually it comes out:</p>
+
+  <div style="background: var(--cream); padding: 24px 28px; border-radius: 12px; margin: 24px 0; border-left: 4px solid var(--yellow-hot);">
+    <p style="font-family: 'Fraunces', serif; font-style: italic; font-size: 17px; color: var(--navy); margin-bottom: 6px;">"Nobody wants to sit with me."</p>
+    <p style="font-family: 'Fraunces', serif; font-style: italic; font-size: 17px; color: var(--navy); margin-bottom: 6px;">"I'm scared to put my hand up."</p>
+    <p style="font-family: 'Fraunces', serif; font-style: italic; font-size: 17px; color: var(--navy); margin-bottom: 6px;">"I hate myself."</p>
+    <p style="font-family: 'Fraunces', serif; font-style: italic; font-size: 17px; color: var(--navy); margin-bottom: 0;">"They're being mean to me again."</p>
+  </div>
+
+  <p>And you freeze. Because whatever comes out of your mouth next will either shrink your child or strengthen them — and there's no rewind button.</p>
+
+  <p>The Parent Companion Guide gives you the exact words. Not theory. Not 20-year-old parenting philosophy. <strong>Scripts.</strong> For the 15 hardest conversations parents of 6–12 year-olds actually have.</p>
+
+  <h3 style="margin-top: 32px;">Inside the Guide</h3>
+  <ul class="feature-list">
+    <li>Word-for-word responses to the 15 phrases parents dread hearing</li>
+    <li>The <strong>Co-Regulation Script</strong> — how to calm a meltdown without making it bigger</li>
+    <li>The Strengths-Based Parenting framework (so every conversation builds them up)</li>
+    <li>How to reinforce every KonfidentKids module at the dinner table</li>
+    <li>The "After School Restraint Collapse" playbook</li>
+  </ul>
+
+  <div class="price-box" style="background: var(--navy); margin: 24px 0;">
+    <div class="price-label">One-Time Add-On</div>
+    <div class="price-main">$27</div>
+    <div class="price-plan">Added as a one-click upsell at checkout — yours forever.</div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="#" class="cta">📘 Add the Parent Guide</a>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 5 — SOCIAL PROOF                     -->
+<!-- ============================================ -->
+<div class="block-label">Block 05 — Social Proof / Testimonials</div>
+
+<div class="section-note">
+  <strong>Placeholder Block</strong>
+  Replace these testimonials with real quotes as they come in. Prioritise specificity over praise — "she walked up to a kid she'd never met" beats "it was amazing." Ask for these at Module 5 and again at graduation. Video voice-notes via WhatsApp convert best.
+</div>
+
+<div class="block">
+  <h2>Why parents are <em>quietly obsessed</em> with this</h2>
+
+  <div class="testimonials">
+    <div class="quote">
+      <p>She used to hide behind me at birthday parties. Last Saturday she walked up to a kid she'd never met and introduced herself. I cried in the car.</p>
+      <div class="quote-attrib">— Parent of 8-year-old · Module 4 graduate</div>
+    </div>
+    <div class="quote">
+      <p>My son got bullied on the school bus. We worked through Module 8 together. Three weeks later the bullying stopped — because he stopped being an easy target.</p>
+      <div class="quote-attrib">— Parent of 10-year-old</div>
+    </div>
+    <div class="quote">
+      <p>She asked to watch Katy instead of YouTube. That tells you everything.</p>
+      <div class="quote-attrib">— Parent of 7-year-old</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 6 — GUARANTEE                        -->
+<!-- ============================================ -->
+<div class="block-label">Block 06 — Risk Reversal / Guarantee</div>
+
+<div class="guarantee">
+  <h2>Try it. Use it. If it doesn't work, <em>we refund you.</em></h2>
+  <p>Enroll your child today. Work through the modules with them over the next 30 days. If you genuinely apply what's taught and don't see your child showing up differently — speaking up more, bouncing back faster, handling setbacks without falling apart — email us and we'll refund every penny.</p>
+  <p style="margin-top: 16px;"><strong style="color: var(--yellow);">No forms. No "prove you watched it." No friction.</strong></p>
+  <p class="closer">We'd rather refund the 1 in 100 who doesn't show up, than keep your money and let you feel stuck.</p>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 7 — MISSION                          -->
+<!-- ============================================ -->
+<div class="block-label">Block 07 — Mission / Footer</div>
+
+<div class="mission">
+  <p>Every child deserves to feel brave.</p>
+  <p>Every parent deserves a tool that actually works.</p>
+  <p>Confidence is a skill. We teach it.</p>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 8 — NAV / CHOOSE YOUR STEP           -->
+<!-- ============================================ -->
+<div class="block-label">Block 08 — Choose Your Next Step (Stan Store Nav)</div>
+
+<div class="block">
+  <h2 style="text-align: center;">Choose your <em>next step</em></h2>
+  <p class="tagline" style="text-align: center;">Three entry points. Start wherever feels right.</p>
+
+  <div class="choose">
+    <div class="choose-card">
+      <div class="choose-icon">🎁</div>
+      <div class="choose-title">Free Power Phrase Cards</div>
+      <div class="choose-desc">Start here. Zero risk. Instant download.</div>
+    </div>
+    <div class="choose-card primary">
+      <div class="choose-icon">🚀</div>
+      <div class="choose-title">The Full Course — $67</div>
+      <div class="choose-desc">Best value. Everything included. Lifetime access.</div>
+    </div>
+    <div class="choose-card">
+      <div class="choose-icon">📘</div>
+      <div class="choose-title">Parent Guide — $27</div>
+      <div class="choose-desc">Scripts for the 15 hardest parent conversations.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 9 — BIO LINK HEADER                  -->
+<!-- ============================================ -->
+<div class="block-label">Block 09 — Stan Store Bio Header (Top of Storefront)</div>
+
+<div class="section-note">
+  <strong>Use This At The Very Top of Your Stan Store</strong>
+  This is the first thing visitors see when they click your TikTok/Instagram bio link. Keep it tight — three short lines, no fluff.
+</div>
+
+<div class="bio-header">
+  <div class="bio-brand">KonfidentKids 💛</div>
+  <div class="bio-tag">Confidence coaching for kids aged 6–12</div>
+  <div class="bio-cta">👇 Start with the free Power Phrase Cards</div>
+</div>
+
+</div>
+
+</body>
+</html>
